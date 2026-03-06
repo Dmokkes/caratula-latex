@@ -17,8 +17,9 @@
 \begin{document}
 \thispagestyle{empty}
 
+%para poner una imagen de fondo, hay 2 procesos el primero es si usa un editor de latex es crear un carpeta donde pondras la imagen y el main
+%en caso de que use un editor en linea dentras que cargar la imagen, usado el boto de subir imagen :)
 \begin{tikzpicture}[remember picture, overlay]
-
 \node[inner sep=0pt] at (current page.center) {\includegraphics[height=\paperheight]{1 (1).png}};
 
 
