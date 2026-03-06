@@ -1,0 +1,47 @@
+\documentclass[spanish,10pt,a5paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{babel}
+\usepackage{tikz}
+\usetikzlibrary{babel,calc}
+\usepackage{kpfonts}
+
+
+
+% Definición de los colores, es usan colores que queda con la imagene de fondo
+\definecolor{col1}{HTML}{C66545}
+\definecolor{col2}{HTML}{AC7D73}
+\definecolor{col3}{HTML}{7A9584}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+\node[inner sep=0pt] at (current page.center) {\includegraphics[height=\paperheight]{1 (1).png}};
+
+
+\node[ inner sep=0pt] at (current page.center) {%
+\begin{minipage}[c][0.55\paperheight]{0.65\paperwidth} 
+
+\centering
+{\color{col1}\Huge\bfseries Titulo del tema }\\[3mm]
+{\color{col2}\huge\itshape Descripción del tema}\\[5mm] 
+
+{\color{col3}\large Nombre del autor para la portada en este espacio }\\[15mm]
+\begin{minipage}{0.5\paperwidth} 
+{\color{col1!45!black}
+\centering {una breve introduccion al tema.}
+} 
+\end{minipage}\\[11mm]
+{\color{col1}\large aqui va el numero de la actividad 
+}
+\end{minipage}};
+
+
+\fill[col3] ($(current page.north east)+(-4,4)$) -| ++(4,-4) --cycle;
+\node[white, rotate=-45] at ($(current page.north east)+(-1.5,-1.5)$) 
+{\large\bfseries fecha}; 
+\end{tikzpicture}
+\end{document}
